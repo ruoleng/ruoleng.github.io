@@ -15,15 +15,25 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ruoleng'blog">
-<meta property="og:url" content="http://ruoleng.github.io/archives/2017/index.html">
+<meta name="description" content="#Boost asio库只使用头文件的方式#
+##前言##之前用过几个Boost的库，比如智能指针shared_ptr，bind，function，expressive都很好，加上工作中需要跟串口、网口通讯打交道，而之前用的都是自己的简单封装或者直接写了调用。所以就想用用asio。
+开始用的那几个库都是根据《Boost程序库完全开发指南》学着用的，这次用的也是。
+##首次尝试##根据旧版(2010">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Boost 的 asio库只使用头文件模式">
+<meta property="og:url" content="http://ruoleng.github.io/2017/04/30/cpp-boost-asio-header-only/index.html">
 <meta property="og:site_name" content="ruoleng'blog">
-<meta property="og:description">
+<meta property="og:description" content="#Boost asio库只使用头文件的方式#
+##前言##之前用过几个Boost的库，比如智能指针shared_ptr，bind，function，expressive都很好，加上工作中需要跟串口、网口通讯打交道，而之前用的都是自己的简单封装或者直接写了调用。所以就想用用asio。
+开始用的那几个库都是根据《Boost程序库完全开发指南》学着用的，这次用的也是。
+##首次尝试##根据旧版(2010">
+<meta property="og:updated_time" content="2017-04-30T15:39:47.779Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ruoleng'blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Boost 的 asio库只使用头文件模式">
+<meta name="twitter:description" content="#Boost asio库只使用头文件的方式#
+##前言##之前用过几个Boost的库，比如智能指针shared_ptr，bind，function，expressive都很好，加上工作中需要跟串口、网口通讯打交道，而之前用的都是自己的简单封装或者直接写了调用。所以就想用用asio。
+开始用的那几个库都是根据《Boost程序库完全开发指南》学着用的，这次用的也是。
+##首次尝试##根据旧版(2010">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -55,7 +65,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Archives: 2017 | ruoleng&#39;blog</title>
+<title>Boost 的 asio库只使用头文件模式 | ruoleng&#39;blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -65,8 +75,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         open_in_new: false,
@@ -256,81 +266,178 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-cpp-boost-asio-header-only" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/04/30/hello-world/" class="archive-article-date">
-      <time datetime="2017-04-30T13:23:54.346Z" itemprop="datePublished">04-30</time>
+    <div class="article-meta">
+      <a href="/2017/04/30/cpp-boost-asio-header-only/" class="article-date">
+      <time datetime="2017-04-29T16:35:05.000Z" itemprop="datePublished">2017-04-30</time>
 </a>
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/30/hello-world/">你好 博客</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Boost 的 asio库只使用头文件模式
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/04/30/cpp-boost-asio-header-only/" class="archive-article-date">
-      <time datetime="2017-04-29T16:35:05.000Z" itemprop="datePublished">04-30</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/30/cpp-boost-asio-header-only/">Boost 的 asio库只使用头文件模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
+        
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Boost/">Boost</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/asio/">asio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/header-only/">header only</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vs2017/">vs2017</a></li></ul>
     </div>
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>#Boost asio库只使用头文件的方式#</p>
+<p>##前言##<br>之前用过几个Boost的库，比如智能指针shared_ptr，bind，function，expressive都很好，<br>加上工作中需要跟串口、网口通讯打交道，而之前用的都是自己的简单封装或者直接写了调<br>用。所以就想用用asio。</p>
+<p>开始用的那几个库都是根据《Boost程序库完全开发指南》学着用的，这次用的也是。</p>
+<p>##首次尝试##<br>根据旧版(2010年9月第一版 ISBN 978-121-11577-6)书中 12.2章（493页）所描述，<br>加上以下宏定义<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#define  BOOST_DATE_TIME_SOURCE</span><br><span class="line">#define  BOOST_SYSTEM_NO_LIB</span><br><span class="line">#define  BOOST_REGEX_NO_LIB</span><br></pre></td></tr></table></figure></p>
+<p>就可以不用编译boost的库使用。但是因为这次不在原来的电脑上写程序，在网上搜了此书<br>发现出了新版，然而新版(2015年3月第一版 ISBN 978-121-25313-3) 12.3章(537页)中并没<br>有涉及到不需要<br>编译Boost库而使用asio库的方法，只提到使用asio库的方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#define  BOOST_ASIO_DISABLE_STD_CHRONO</span><br><span class="line">#include &lt;boost/asio.hpp</span><br><span class="line">using namespace boost::asio;</span><br></pre></td></tr></table></figure></p>
+<p>而Boost的帮助文件中则没有任何只用头文件的说明，只说到不自动链接Boost.Date_Time和<br>Boost.Regex的方法（在链接的命令行中添加 -DBOOST_DATE_TIME_NO_LIB 和<br>-DBOOST_REGEX_NO_LIB）；通过Google搜索也只搜到StackOverFlow上的提问，因为无论怎么<br>设置都无法避开Boost的System的lib链接。</p>
+<p>通过查看书中的System说明，同时百度也随便搜了其他的方法，终于找到了解决的方法<br>增加多<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**BOOST_ERROR_CODE_HEADER_ONLY**</span><br></pre></td></tr></table></figure></p>
+<p>这个宏的定义就可以以头文件的方式使用Boost.System库。<br>所以要以头文件方式使用Boost.asio库要定义的头文件为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#define  BOOST_ERROR_CODE_HEADER_ONLY</span><br><span class="line">#define  BOOST_DATE_TIME_SOURCE</span><br><span class="line">#define  BOOST_SYSTEM_NO_LIB</span><br><span class="line">#define  BOOST_REGEX_NO_LIB</span><br><span class="line">#include &lt;boost/asio.hpp</span><br><span class="line">//using namespace boost::asio;  看自己需要是否要加入命名空间的使用</span><br></pre></td></tr></table></figure></p>
+<p>增加后在VS2017下编译通过。</p>
+
+      
+    </div>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2017/04/30/cpp-boost-asio-header-only/">Boost 的 asio库只使用头文件模式</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">ruoleng</a></p>
+        <p><span>Created:</span>2017-04-30, 00:35:05</p>
+        <p><span>Updated:</span>2017-04-30, 23:39:47</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2017/04/30/cpp-boost-asio-header-only/" title="Boost 的 asio库只使用头文件模式">http://ruoleng.github.io/2017/04/30/cpp-boost-asio-header-only/</a>
+            <span class="copy-path" data-clipboard-text="From http://ruoleng.github.io/2017/04/30/cpp-boost-asio-header-only/　　By ruoleng" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/04/30/hello-world/">
+                    你好 博客
+                </a>
+            </div>
+        
+        
+    </nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+</div>
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+<script>
+    yiliaConfig.toc = ["Hide", "Show", !!"false"];
+</script>
+
+
 
     
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Boost 的 asio库只使用头文件模式　| ruoleng'blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
 
+    
+</div>
+
+
+
+
+
+
+
+    
+        <section class="youyan" id="comments">
+    <script>
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = 'http://v2.uyan.cc/code/uyan.js?uid=2103384';
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
+
+    <div id="uyan_frame"></div>
+</section>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/04/30/hello-world/" title="Pre: 你好 博客">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/30/hello-world/">你好 博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/30/cpp-boost-asio-header-only/">Boost 的 asio库只使用头文件模式</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
